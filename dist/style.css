@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.ab-new-block {
+  display: flex;
+  justify-content: space-around;
+  padding: 6rem 6rem;
+  background-color: #EAEBED;
+  font-size: 16px;
+}
+.ab-new-block__Item {
+  width: 27%;
+}
+.ab-new-block .Item__title {
+  margin-bottom: 22px;
+}
+.ab-new-block .Item__text {
+  color: #4a4f54;
+}
+
+.SpecificationsAtAGlance__items + .ctaContainer > a {
+  position: relative;
+  padding: 1px 50px 0 50px;
+}
+
+.SpecificationsAtAGlance__items + .ctaContainer > a::after {
+  content: "";
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inheri;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  position: absolute;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  positoin: absolute;
+  left: 15px;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  font-size: 2rem;
+  top: 12px;
+  backface-visibility: hidden;
+}
+
+.ab-new-get-in-touch {
+  display: flex;
+  justify-content: space-around;
+  padding: 6rem 6rem;
+  background-color: #e9ecec;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+.ab-new-get-in-touch__Item {
+  width: 39%;
+}
+.ab-new-get-in-touch .Item__title {
+  margin-bottom: 22px;
+}
+.ab-new-get-in-touch .Item__text {
+  color: #4a4f54;
+}
+.ab-new-get-in-touch .heading {
+  width: 100%;
+  margin-bottom: 7rem;
+}
+.ab-new-get-in-touch a {
+  color: #4a4f54;
+  text-decoration: underline;
+}
+.ab-new-get-in-touch .cta {
+  background-color: red;
+}
+
+#content > .SignPostContainer + .Snippet + .Snippet[data-theme=grey] {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

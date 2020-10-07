@@ -1,0 +1,100 @@
+{
+  // Place your Workspace workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "Document query selector": {
+    "scope": "javascript",
+    "prefix": "docsel",
+    "body": ["document.querySelector(\"$1\")"],
+    "description": "Select an element in the DOM"
+  },
+  "Document query selector all": {
+    "scope": "javascript",
+    "prefix": "docselall",
+    "body": ["document.querySelectorAll(\"$1\")"],
+    "description": "Select multiple elements in the DOM"
+  },
+  "Mutation observer": {
+    "scope": "javascript",
+    "prefix": "mutation",
+    "body": [
+      "const observer = new MutationObserver(() => {",
+      "",
+      "});",
+      "",
+      "observer.observe(document.querySelector('body'), { childList: true, subtree: true, attributes: true });"
+    ],
+    "description": "Watch for mutation in the DOM"
+  },
+  "Event delegate": {
+    "scope": "javascript",
+    "prefix": "delegate, documentOn",
+    "body": [
+      "const documentOn = (eventName, elementSelector, handler) => {",
+      "document.addEventListener(",
+      "eventName,",
+      "function (e) {",
+      "for (var target = e.target; target && target != this; target = target.parentNode) {",
+      "if (target.matches(elementSelector)) {",
+      "handler.call(target, e);",
+      "break;",
+      "}",
+      "}",
+      "},",
+      "false",
+      ");",
+      "};"
+    ],
+    "description": "Watch for mutation in the DOM"
+  },
+  "Create element": {
+    "scope": "javascript",
+    "prefix": "documentcreate, createelement",
+    "body": [
+      "const createElement = ({ type, classes, text }, appendStrategy, appendTarget) => {",
+      "const el = document.createElement(type);",
+      "",
+      "if (classes) {",
+      "const classArr = [].concat(classes);",
+      "classArr.forEach((classStr) => {",
+      "el.classList.add(classStr);",
+      "});",
+      "}",
+      "",
+      "if (text) {",
+      "el.innerText = text.toString();",
+      " }",
+      "return el;",
+      "};",
+      "],"
+    ],
+    "description": "Watch for mutation in the DOM"
+  },
+  "Create element": {
+    "scope": "javascript",
+    "prefix": "createappend, documentcreateandappend",
+    "body": [
+      "const createAndAppendElement = ({ type, classes, text",
+      "}, appendStrategy, appendTarget) => {",
+      "const el = document.createElement(type);",
+      "",
+      "if (classes) {",
+      "const classArr = [].concat(classes);",
+      "classArr.forEach((classStr) => {",
+      "el.classList.add(classStr);",
+      "});",
+      "}",
+      "",
+      "if (text) {",
+      "el.innerText = text.toString();",
+      "}",
+      "return document.querySelector(appendTarget).insertAdjacentElement(appendStrategy, el);",
+      "};"
+    ],
+    "description": "Watch for mutation in the DOM"
+  }
+}

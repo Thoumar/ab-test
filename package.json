@@ -1,0 +1,24 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "convert-babel": "npx babel ./src/index.js --watch --out-file ./dist/script.js",
+    "convert-sass": "sass --watch ./src/style.sass ./dist/style.css",
+    "serve": "live-server ./dist",
+    "start": "concurrently \"npm run convert-babel\" \"npm run convert-sass\" \"npm run serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "npm": "^6.14.8"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53"
+  }
+}
